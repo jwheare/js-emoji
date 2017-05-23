@@ -36,13 +36,12 @@
 		list($key) = explode('.', $row['image']);
 		$out[$key] = array(
 			array(calc_bytes($row['unified'])),
-			calc_bytes($row['softbank']),
-			calc_bytes($row['google']),
+			$row['category'],
+			$row['sort_order'],
 			$row['short_names'],
 			$row['sheet_x'],
 			$row['sheet_y'],
-			calc_img_has($row),
-			0,
+			$row['added_in'],
 		);
 		if ($row['text']){
 			$out[$key][] = $row['text'];
@@ -65,8 +64,8 @@
 					$sub_key,
 					$row2['sheet_x'],
 					$row2['sheet_y'],
-					calc_img_has($row2),
 					array(calc_bytes($row2['unified'])),
+					$row2['added_in']
 				);
 			}
 		}
