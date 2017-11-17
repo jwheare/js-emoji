@@ -1,0 +1,5 @@
+// https://github.com/jwheare/js-emoji/tree/irccloud
+// Update .emoji background-size in CSS when sheet_size changes
+window.emoji.sheet_size = #SHEET-SIZE#;
+window.emoji.data = #DATA#;
+window.emoji.variations_data = #DATA-VARS#;
